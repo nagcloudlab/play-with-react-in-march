@@ -1,0 +1,67 @@
+
+why do we need javascript?
+
+-> to develop dynamic web-UI. ( e,g browser )
+-> to develop server-side applications. ( e,g Node.js )
+-> to develop mobile applications ( e,g React Native )
+-> to develop desktop applications ( e,g Electron )
+
+
+javascript features:
+
+-> single-threaded-process
+-> by default, all I/O operations are asynchronous ( non-blocking )
+-> function is a first-class citizen ( can be treated as a value )
+-> dynamically-typed language ( no need to declare variable type )
+
+
+How to run javascript code?
+
+-> using javascript engine.
+
+1. chrome -> v8 ( c++ )
+2. firefox -> spider monkey ( c++ )
+3. safari -> JavaScriptCore ( c++ )
+4. Edge -> Chakra ( c++ )
+5. Node.js -> v8 ( c++ )
+6. JVM -> Nashorn ( java )
+7. MongoDB -> v8 ( c++ )
+....    
+
+javasctipt follows ECMAScript standard. ( e,g ES6, ES7, ES8, ... )
+
+
+hello world in javascript
+console.log("Hello, World!");
+
+
+javascript topics:
+-----------------------
+
+level-1 topics:
+-----------------
+-> data types
+-> execution-context aka scope
+-> functions
+-> objects
+
+level-2 topics:
+-----------------
+-> es6 features ( let, const, arrow functions, template literals, destructuring, ... )
+-> asynchronous programming ( callbacks, promises, async/await )
+
+level-3 topics:
+-----------------
+-> unit testing ( e,g jest )
+-> event loop ( how javascript in browser works )
+
+
+----------------
+
+-> building web-ui
+-> challenges while building web-ui
+-> how to overcome those challenges -> using frameworks and libraries ( e,g React, Angular, Vue )
+
+----------------
+
+
