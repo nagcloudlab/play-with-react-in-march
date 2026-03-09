@@ -43,7 +43,6 @@ level-1 topics:
 -> data types
 -> execution-context aka scope
 -> functions
--> objects
 
 level-2 topics:
 -----------------
