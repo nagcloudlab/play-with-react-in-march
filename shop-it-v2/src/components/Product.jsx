@@ -30,7 +30,7 @@ function Product(props) {
                         </button>
                         <small className="text-muted"> {isInCart ? "Already in Cart" : ""}</small>,
                         <small> Quantity: {isInCart ? isInCart.quantity : 0}</small>
-                        <hr />
+                        <br /><br />
                         <ul className="nav nav-tabs">
                             <li className="nav-item">
                                 <a className={`nav-link ${currentTab === 1 ? "active" : ""}`} href="#" onClick={() => handleTabChange(1)}>Description</a>

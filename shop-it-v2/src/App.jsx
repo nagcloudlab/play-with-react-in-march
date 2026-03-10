@@ -48,6 +48,21 @@ function App() {
     setCart(newCart)
   }
 
+  const changeQuantity = (product, delta) => {
+    const newCart = cart.map(item => {
+      if (item.id === product.id) {
+        const newQuantity = item.quantity + delta
+        return {
+          ...item,
+          quantity: newQuantity > 0 ? newQuantity : 1,
+          totalPrice: (newQuantity > 0 ? newQuantity : 1) * item.price
+        }
+      }
+      return item
+    })
+    setCart(newCart)
+  }
+
   return (
     <div className="container">
       <Navbar title="shop-IT" />
@@ -58,7 +73,7 @@ function App() {
         {isCartOpen ? 'Close Cart' : 'Open Cart'}
       </button>
       <hr />
-      {isCartOpen && <CartView cart={cart} onRemove={removeFromCart} />}
+      {isCartOpen && <CartView cart={cart} onRemove={removeFromCart} onQuantityChange={changeQuantity} />}
       <hr />
       <ProductList onBuy={(product) => addToCart(product)} cart={cart} />
     </div>
