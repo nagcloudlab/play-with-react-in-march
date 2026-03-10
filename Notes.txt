@@ -1,0 +1,74 @@
+
+
+
+UI -> data + style + interactivity
+Web UI -> HTML + CSS + JS
+
+
+why we need javascript on HTML-pages?
+
+
+using browser's Apis, javascript can do any magic on the webpage, for example:
+
+browser's Apis => w3c recommendations, implemented by browser vendors navivly ( c++ ),
+abstracted as javascript objects and methods, in global-scope, accessible from any script on the page
+
+e.g DOM,XHR/Fetch,Timers, etc.
+
+using DOM API, javascript can:
+-------------------------------
+-> create/retrieve/update/delete HTML-elements
+-> react to user events (click, hover, scroll, etc.)
+-> change styles dynamically
+
+using XHR/Fetch API, javascript can:
+-------------------------------
+-> make asynchronous requests to the server
+
+using Timers API, javascript can:
+-------------------------------
+-> execute some actions on time intervals (setTimeout, setInterval)
+
+https://developer.mozilla.org/en-US/docs/Web/API
+https://caniuse.com/
+
+https://www.w3schools.com/cssref/trysel.php
+
+
+
+
+complexities while working browser apis using plain-javascript ( your script)
+------------------------------------------------------
+1. browser compatibility issues ( different browsers may implement APIs differently, or not support some features at  all )
+2. performance issues ( manipulating DOM can be expensive, especially if you have a lot of elements or complex interactions )
+3. memory leaks ( if you create a lot of event listeners or DOM elements without proper cleanup, it can lead to memory leaks )
+4. security issues ( if you don't properly sanitize user input or handle data, it can lead to security vulnerabilities like XSS attacks )
+5. code maintainability ( as your codebase grows, it can become difficult to manage and maintain, especially if you have a lot of interdependent code )
+
+
+
+solution:
+
+-> jquery ( a popular javascript library that simplifies DOM manipulation, event handling, and AJAX requests )
+
+mvc (model-view-controller) pattern javascript frameworks
+------------------------------------------------------
+
+-> backbone.js ( one of the earliest MVC frameworks, provides a minimal structure for building web applications )
+-> knockout.js ( focuses on MVVM pattern, provides data-binding and dependency tracking )
+-> dojo ( a comprehensive framework that includes a wide range of features, including DOM manipulation, event handling, and AJAX requests )
+-> Ext JS ( a comprehensive framework that includes a wide range of features, including DOM manipulation, event handling, and AJAX requests )
+-> Ember.js ( a comprehensive framework that includes a wide range of features, including DOM manipulation, event handling, and AJAX requests )
+-> AngularJS ( a comprehensive framework that includes a wide range of features, including DOM manipulation,
+
+
+
+component-based architecture javascript frameworks
+------------------------------------------------------
+
+-> React ( a popular library for building user interfaces, focuses on component-based architecture and virtual DOM )
+-> Angular ( a comprehensive framework that includes a wide range of features, including DOM manipulation, event handling, and AJAX requests, focuses on component-based architecture )
+-> Vue.js ( a progressive framework for building user interfaces, focuses on component-based architecture and reactive
+data binding )
+-> Svelte ( a compiler that generates highly efficient JavaScript code, focuses on component-based architecture and reactive data binding )
+...
