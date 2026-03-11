@@ -1,17 +1,24 @@
 
-import { useContext } from "react"
+import { useContext, useCallback } from "react"
 import TodosContext from "../contexts/TodosContext"
 
-function DataList({ }) {
-    const { todos, dispatch } = useContext(TodosContext)
-    const handleToggle = (id) => {
+function DataList({ todos }) {
+    console.log('DataList render')
+    const { filter, dispatch } = useContext(TodosContext)
+    const handleToggle = useCallback((id) => {
         dispatch({ type: 'TOGGLE_TODO', id })
-    }
-    const handleDelete = (id) => {
+    }, [])
+    const handleDelete = useCallback((id) => {
         dispatch({ type: 'DELETE_TODO', id })
-    }
+    }, [])
+
     return (
         <>
+            <hr />
+            {filter === 'all' && <div className='text-secondary'>All</div>}
+            {filter === 'active' && <div className='text-secondary'>Pending</div>}
+            {filter === 'completed' && <div className='text-secondary'>Completed</div>}
+            <hr />
             <ul className='list-group mt-3'>
                 {todos.map(item => (
                     <li key={item.id} className='list-group-item'>

@@ -26,6 +26,9 @@ function todosReducer(todos = [], action) {
             let { id } = action
             return todos.filter(todo => todo.id !== id)
         }
+        case 'CLEAR_COMPLETED': {
+            return todos.filter(todo => !todo.completed)
+        }
         default:
             return todos
     }
