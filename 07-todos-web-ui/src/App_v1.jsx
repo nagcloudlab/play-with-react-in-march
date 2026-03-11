@@ -21,7 +21,6 @@ function App() {
     }
   ])
 
-
   const handleDelete = (id) => {
     const action = {
       type: 'DELETE_TODO',
