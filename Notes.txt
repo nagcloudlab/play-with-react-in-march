@@ -1,6 +1,5 @@
 
 
-
 UI -> data + style + interactivity
 Web UI -> HTML + CSS + JS
 
