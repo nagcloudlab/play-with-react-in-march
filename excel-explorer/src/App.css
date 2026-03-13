@@ -1,0 +1,225 @@
+/* Layout */
+.app-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.filter-sidebar {
+  width: 280px;
+  min-width: 280px;
+  background: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-section {
+  flex: 1;
+  overflow: auto;
+  padding: 1rem;
+}
+
+.chart-section {
+  border-top: 1px solid #dee2e6;
+  padding: 1rem;
+  background: #fff;
+}
+
+/* Upload Screen */
+.upload-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f8f9fa;
+}
+
+.upload-zone {
+  border: 3px dashed #adb5bd;
+  border-radius: 12px;
+  padding: 4rem 3rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+  max-width: 500px;
+  width: 100%;
+}
+
+.upload-zone:hover,
+.upload-zone.drag-over {
+  border-color: #0d6efd;
+  background-color: #e7f1ff;
+}
+
+.upload-zone h2 {
+  margin-bottom: 0.5rem;
+  color: #495057;
+}
+
+.upload-zone p {
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+}
+
+.upload-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #6c757d;
+}
+
+/* Filter panel */
+.filter-sidebar h6 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #6c757d;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.filter-group {
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.filter-group:last-child {
+  border-bottom: none;
+}
+
+.filter-group label {
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  display: block;
+}
+
+.checkbox-list {
+  max-height: 150px;
+  overflow-y: auto;
+  font-size: 0.85rem;
+}
+
+.checkbox-list .form-check {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Table */
+.data-table {
+  font-size: 0.85rem;
+}
+
+.data-table th {
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1;
+}
+
+.data-table th:hover {
+  background: #e9ecef;
+}
+
+.sort-arrow {
+  margin-left: 4px;
+  opacity: 0.5;
+}
+
+.sort-arrow.active {
+  opacity: 1;
+}
+
+.data-table td {
+  white-space: nowrap;
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Status bar */
+.status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  font-size: 0.85rem;
+}
+
+/* Chart */
+.chart-config {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  align-items: flex-end;
+}
+
+.chart-config .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.chart-config label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6c757d;
+}
+
+.chart-config select {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.5rem;
+}
+
+/* Query input */
+.query-input textarea {
+  font-family: monospace;
+  font-size: 0.85rem;
+}
+
+.query-error {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.query-help {
+  font-size: 0.75rem;
+  color: #6c757d;
+}
+
+/* Sheet selector */
+.sheet-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Pagination */
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+}
+
+.pagination-controls .page-info {
+  font-size: 0.85rem;
+  color: #6c757d;
+}
