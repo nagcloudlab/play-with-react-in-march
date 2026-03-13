@@ -1,0 +1,59 @@
+<h1>{{heading}}</h1>
+
+<section class="card">
+  <h2>What is SSR?</h2>
+  <p>
+    With <strong>Server-Side Rendering</strong>, the server builds the complete HTML
+    for each page and sends it to the browser. The browser just displays it — no
+    JavaScript framework needed on the client to see content.
+  </p>
+
+  <h3>Key benefits:</h3>
+  <ul>
+    {{#each features}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
+</section>
+
+<section class="card">
+  <h2>How this app works</h2>
+  <ol>
+    <li>Browser requests a URL (e.g. <code>/products</code>)</li>
+    <li>Express matches the route and gathers data</li>
+    <li>Handlebars template is compiled with that data on the <strong>server</strong></li>
+    <li>Finished HTML string is sent as the response</li>
+    <li>Browser renders it immediately — zero client-side JS required</li>
+  </ol>
+</section>
+
+<section class="card">
+  <h2>SSR vs CSR (Client-Side Rendering)</h2>
+  <table>
+    <thead>
+      <tr><th></th><th>SSR</th><th>CSR (React SPA)</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>First Paint</strong></td>
+        <td>Fast — HTML arrives ready</td>
+        <td>Slow — must download JS first</td>
+      </tr>
+      <tr>
+        <td><strong>SEO</strong></td>
+        <td>Excellent — crawlers see content</td>
+        <td>Poor — crawlers see empty div</td>
+      </tr>
+      <tr>
+        <td><strong>Interactivity</strong></td>
+        <td>Full page reloads</td>
+        <td>Instant, no reloads</td>
+      </tr>
+      <tr>
+        <td><strong>Server Load</strong></td>
+        <td>Higher — renders every request</td>
+        <td>Lower — static files + API</td>
+      </tr>
+    </tbody>
+  </table>
+</section>

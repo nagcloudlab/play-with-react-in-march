@@ -1,0 +1,20 @@
+<h1>{{product.name}}</h1>
+<p class="meta">Rendered at <strong>{{renderedAt}}</strong></p>
+
+<div class="card">
+  <p class="price">${{product.price}}</p>
+  {{#if product.inStock}}
+    <span class="badge in-stock">In Stock</span>
+  {{else}}
+    <span class="badge out-of-stock">Out of Stock</span>
+  {{/if}}
+
+  <hr>
+  <p>
+    This page was rendered on the <strong>server</strong> for product ID <code>{{product.id}}</code>.
+    The Express route <code>/products/:id</code> looked up the data and passed it to the
+    Handlebars template — all before the browser received a single byte.
+  </p>
+</div>
+
+<a href="/products" class="btn">Back to Products</a>

@@ -1,0 +1,43 @@
+<h1>Why SSR?</h1>
+
+<section class="card">
+  <h2>Try it yourself</h2>
+  <ol>
+    <li>Go to the <a href="/products">Products</a> page</li>
+    <li>Right-click → <strong>View Page Source</strong></li>
+    <li>Notice: all the product data is <em>already in the HTML</em></li>
+    <li>There's no <code>&lt;script&gt;</code> fetching data from an API</li>
+    <li>No loading spinners, no "hydration" — just HTML</li>
+  </ol>
+</section>
+
+<section class="card">
+  <h2>Compare with a typical React SPA</h2>
+  <p>A CSR React app's page source looks like this:</p>
+  <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;div id="root"&gt;&lt;/div&gt;
+    &lt;script src="/bundle.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  <p>
+    The <code>&lt;div id="root"&gt;</code> is <strong>empty</strong>. All content is generated
+    by JavaScript <em>after</em> the page loads. Search engines and users on slow
+    connections see nothing until the JS bundle downloads and executes.
+  </p>
+</section>
+
+<section class="card">
+  <h2>This SSR app's page source</h2>
+  <pre><code>&lt;h1&gt;Products&lt;/h1&gt;
+&lt;div class="card product-card"&gt;
+  &lt;h3&gt;Mechanical Keyboard&lt;/h3&gt;
+  &lt;p class="price"&gt;$89.99&lt;/p&gt;
+  &lt;span class="badge"&gt;In Stock&lt;/span&gt;
+&lt;/div&gt;
+...</code></pre>
+  <p>
+    Everything is right there in the HTML. The server did all the work.
+  </p>
+</section>

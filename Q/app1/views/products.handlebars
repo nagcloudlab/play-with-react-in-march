@@ -1,0 +1,17 @@
+<h1>Products</h1>
+<p class="meta">Page rendered on the server at <strong>{{renderedAt}}</strong>. Refresh to see a new timestamp.</p>
+
+<div class="grid">
+  {{#each products}}
+    <div class="card product-card">
+      <h3>{{this.name}}</h3>
+      <p class="price">${{this.price}}</p>
+      {{#if this.inStock}}
+        <span class="badge in-stock">In Stock</span>
+      {{else}}
+        <span class="badge out-of-stock">Out of Stock</span>
+      {{/if}}
+      <a href="/products/{{this.id}}" class="btn">View Details</a>
+    </div>
+  {{/each}}
+</div>
