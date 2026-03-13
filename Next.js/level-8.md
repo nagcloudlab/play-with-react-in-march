@@ -59,29 +59,27 @@ from here         to here
 - Create a new folder at the project root: `lib/`
 - Create file: `lib/data.ts`
 
-  ```ts
-  export let courses = [
-    {
-      id: 1,
-      name: "Next.js Fundamentals",
-      instructor: "Admin"
-    },
-    {
-      id: 2,
-      name: "React Advanced",
-      instructor: "Admin"
-    },
-    {
-      id: 3,
-      name: "Microservices Architecture",
-      instructor: "Admin"
-    }
-  ]
-
-  export function addCourse(course: any) {
-    courses.push(course)
-  }
-  ```
+```ts
+declare global {
+    var _courses: any[] | undefined
+}
+if (!global._courses) {
+    global._courses = [
+        { id: 1, name: "Next.js Fundamentals", instructor: "Admin" },
+        { id: 2, name: "React Advanced", instructor: "Admin" },
+        { id: 3, name: "Microservices Architecture", instructor: "Admin" },
+        { id: 4, name: "Cloud Computing with AWS", instructor: "Admin" },
+    ]
+}
+export const courses = global._courses!
+export function getCourses() {
+    return global._courses!
+}
+export function addCourse(course: any) {
+    global._courses!.push(course)
+    console.log(global._courses)
+}
+```
 
   **Line-by-line breakdown:**
 
