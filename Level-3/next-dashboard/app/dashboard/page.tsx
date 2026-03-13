@@ -1,4 +1,6 @@
+import DashboardStats from "@/components/DashboardStats"
 import StatCard from "@/components/StatCard"
+import { Suspense } from "react"
 
 async function getDashboardStats() {
     return {
@@ -10,15 +12,19 @@ async function getDashboardStats() {
 }
 
 export default async function DashboardPage() {
+
+    // similuate a delay
+    //await new Promise((resolve) => setTimeout(resolve, 2000))
+
     const stats = await getDashboardStats()
+
     return (
         <div className="container">
             <h2 className="mb-4">Dashboard</h2>
             <div className="row">
-                <StatCard title="Users" value={stats.users} color="primary" />
-                <StatCard title="Courses" value={stats.courses} color="success" />
-                <StatCard title="Revenue" value={stats.revenue} color="warning" />
-                <StatCard title="Active Sessions" value={stats.activeSessions} color="dark" />
+                <Suspense fallback={<p>Loading stats...</p>}>
+                    <DashboardStats />
+                </Suspense>
             </div>
         </div>
     )
